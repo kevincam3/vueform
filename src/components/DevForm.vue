@@ -200,7 +200,8 @@ export default {
   },
   methods: {
     deleteItem(item){
-      this.rowitems.splice(item.index, 1)
+      let position = parseInt(item.index) + 1;
+      document.getElementsByTagName("tr")[position].remove()
     },
     addItem(){
       this.rowitems.push({})
